@@ -1,0 +1,30 @@
+import org.openqa.selenium.WebElement;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class TC01_ValidLogin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "C:\\browserdrivers\\chromedriver.exe");
+		
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("http://www.google.com");
+		
+		 driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
+	        
+	        WebElement searchBox = driver.findElement(By.name("q"));
+	        WebElement searchButton = driver.findElement(By.name("btnK"));
+	        
+	        searchBox.sendKeys("Selenium");
+	        searchButton.click();
+	        
+	        searchBox = driver.findElement(By.name("q"));
+	        searchBox.getAttribute("value"); // => "Selenium"
+	        
+	        driver.quit();	
+	}
+}
