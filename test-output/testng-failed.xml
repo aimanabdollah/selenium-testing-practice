@@ -9,10 +9,9 @@
       <class name="com.itlearn.testcases.LoginTestDataDrivenTesting">
         <methods>
           <include name="setUp"/>
-          <include name="fetchDashboardText"/>
           <include name="tearDown"/>
           <include name="setUpSuite"/>
-          <include name="VerifyLogin"/>
+          <include name="VerifyLogin" invocation-numbers="1 2"/>
         </methods>
       </class> <!-- com.itlearn.testcases.LoginTestDataDrivenTesting -->
     </classes>

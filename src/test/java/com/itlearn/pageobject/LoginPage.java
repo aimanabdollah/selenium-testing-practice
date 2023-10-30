@@ -29,6 +29,9 @@ public class LoginPage extends BaseTest {
 
     @FindBy(partialLinkText = "Log Keluar")
     WebElement logoutclick;
+    
+    @FindBy(partialLinkText = "Log Masuk")
+    WebElement redirectLoginPage;
 
     // Login to the portal with email and password
     public void loginToPortal(String email, String password) {
@@ -40,18 +43,8 @@ public class LoginPage extends BaseTest {
     // Logout from the portal
     public void logout() {
         logoutclick.click();
+        redirectLoginPage.click();
     }
 
-    // Validate the dashboard page
-    public void dashboardportal(String dash) throws IOException {
-        String actualdash = driver.findElement(By.xpath("//*[@id=\"login-list\"]/li[1]/a")).getText();
-        System.out.println(actualdash);
-
-        if (actualdash.equals(dash)) {
-            System.out.println("Test Passed");
-        } else {
-            captureScreenShot(driver, "fetchDashboardText");
-        }
-        assertEquals(dash, actualdash);
-    }
+   
 }

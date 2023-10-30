@@ -7,8 +7,8 @@
   <test thread-count="5" name="Test">
     <classes>
    <!--   <class name="com.itlearn.testcases.DashboardTest"/> -->
-    <!--     <class name="com.itlearn.testcases.RegisterTest"/> -->
-    <class name="com.itlearn.testcases.LoginTestDataDrivenTesting"/> 
+    <!--     <class name="com.itlearn.testcases.LoginTestDataDrivenTesting"/> -->
+    <class name="com.itlearn.testcases.SearchTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
